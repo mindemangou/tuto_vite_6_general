@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mindemangou/magiccomponents": "^7.1.6",
+    "@mindemangou/magiccomponents-react": "^4.2.3",
     "lodash.camelcase": "^4.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

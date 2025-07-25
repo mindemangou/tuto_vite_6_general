@@ -1,11 +1,17 @@
-
-const currentDate=new Date()
-      currentDate.setDate(currentDate.getDate()+1)
+import {define} from "@mindemangou/magiccomponents"
 
 
-//const cookies=await cookieStore.set({name:'john',value:'doe',expires:currentDate.getTime()})
+const x={['username']:'doe'}
 
-//const getCookie=await cookieStore.getAll()
+console.log(x.ville)
 
-const deleteCookie=await cookieStore.delete('john')
-console.log(deleteCookie)
+// const res=await fetch('http://localhost:8000',{
+//     signal:AbortSignal.timeout(3000)
+// })
+
+// const data=await res.json()
+// console.log(data)
+
+// define({tagname:'essai-essai',adaptater:'react'},({slots,element,props})=>{
+//     console.log(slots,element,props)
+// })

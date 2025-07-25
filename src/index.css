@@ -1,68 +1,83 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#default-example {
+  text-align: left;
+  counter-set: chapter-count 100;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+#example-element {
+  background-color: #37077c;
+  color: white;
 }
-a:hover {
-  color: #535bf2;
+
+h2 {
+  counter-increment: chapter-count 1;
+  font-size: 1em;
+}
+
+h2::before {
+  content: "Chapter " counter(chapter-count,armenian) ": ";
+}
+
+ul{
+  list-style-type: armenian;
+}
+
+#imgtest{
+   height: 65rem;
+   width: 65rem;
+   overflow-y: hidden;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* :root {
+  --c:1
+} 
+
+@keyframes timer {
+  from { --c:1}
+}
+div::after{
+  animation: timer 5s linear;
+  counter-set: var(--c);
+  counter-increment: count var(--c);
+  content: counter(count);
+} */
+
+/* upper-roman lower-roman*/
+
+/* :root {
+  --base-color:hsl(56, 82%, 26%);
+  --primary-color:hsl(from var(--base-color) h s calc( 1 + 10) );
+  --secondary-color:hsl(from var(--base-color) h s calc( 1 + 20) );
+  --base-darker:hsl(from var(--base-color) h s calc( 1 - 5) );
+
+
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+   background-color: var(--base-color); 
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+section{
+  height: 10rem;
+  width:10rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.sect1 {
+  background: var(--base-color);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.sect2 {
+  background: var(--primary-color);
 }
+
+.sect3 {
+  background: var(--secondary-color);
+}
+
+.sect4 {
+  background: var(--base-darker);
+} */
