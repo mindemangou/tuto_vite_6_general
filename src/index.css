@@ -1,83 +1,25 @@
-#default-example {
-  text-align: left;
-  counter-set: chapter-count 100;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#example-element {
-  background-color: #37077c;
-  color: white;
+
+header {
+  height: 3rem ;
+  width: attr(data-height %);
+  position: fixed;
+  top: 0;
+  background-color: attr(data-bg type(<custom-ident>) );
+  color: rgb(255, 252, 252);
+
+  &::after {
+    content: "salut" " " attr(data-name  raw-string);
+  }
+  
 }
 
-h2 {
-  counter-increment: chapter-count 1;
-  font-size: 1em;
+
+div {
+  height: 150rem;
 }
-
-h2::before {
-  content: "Chapter " counter(chapter-count,armenian) ": ";
-}
-
-ul{
-  list-style-type: armenian;
-}
-
-#imgtest{
-   height: 65rem;
-   width: 65rem;
-   overflow-y: hidden;
-}
-
-img{
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-/* :root {
-  --c:1
-} 
-
-@keyframes timer {
-  from { --c:1}
-}
-div::after{
-  animation: timer 5s linear;
-  counter-set: var(--c);
-  counter-increment: count var(--c);
-  content: counter(count);
-} */
-
-/* upper-roman lower-roman*/
-
-/* :root {
-  --base-color:hsl(56, 82%, 26%);
-  --primary-color:hsl(from var(--base-color) h s calc( 1 + 10) );
-  --secondary-color:hsl(from var(--base-color) h s calc( 1 + 20) );
-  --base-darker:hsl(from var(--base-color) h s calc( 1 - 5) );
-
-
-}
-
-body {
-   background-color: var(--base-color); 
-}
-
-section{
-  height: 10rem;
-  width:10rem;
-}
-
-.sect1 {
-  background: var(--base-color);
-}
-
-.sect2 {
-  background: var(--primary-color);
-}
-
-.sect3 {
-  background: var(--secondary-color);
-}
-
-.sect4 {
-  background: var(--base-darker);
-} */
