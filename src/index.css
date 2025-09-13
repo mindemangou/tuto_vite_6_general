@@ -4,22 +4,24 @@
   box-sizing: border-box;
 }
 
-
-header {
-  height: 3rem ;
-  width: attr(data-height %);
-  position: fixed;
-  top: 0;
-  background-color: attr(data-bg type(<custom-ident>) );
-  color: rgb(255, 252, 252);
-
-  &::after {
-    content: "salut" " " attr(data-name  raw-string);
-  }
-  
+html {
+  --theme:attr('theme');
+  color-scheme: attr('theme' type(*));
 }
 
-
-div {
-  height: 150rem;
+:root {
+  /* color-scheme:light dark only dark only light */
 }
+
+section {
+  height: 4rem;
+  width: 4rem;
+  background-color: light-dark(blue,white);
+}
+
+h1 {
+  background:linear-gradient(10deg,green,yellow);
+  color: transparent;
+  background-clip: text;
+}
+

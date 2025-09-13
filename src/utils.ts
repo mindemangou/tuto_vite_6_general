@@ -15,4 +15,3 @@ export const define=(name:string,connected:(element:HTMLElement,props:object)=>v
 }
 
 
-  

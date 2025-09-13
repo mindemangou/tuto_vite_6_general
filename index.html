@@ -1,18 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" theme="only dark">
+
   <head>
+    
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
-    <script src="./src/index.js" type="module"  defer ></script>
+    <!-- <script src="./src/App.tsx" type="module"  defer ></script> -->
     <link rel="stylesheet" href="./src/index.css">
+    
   </head>
+
   <body>
 
-    <header data-height="30" data-name="salut les gent" data-bg="green" ></header>
-    <div></div>
-    <!--<essai-essai id="root" name="doe gaut" data-essai="34" blue>
+    <section></section>
+    <button>change style </button>
+    <div id="root" ></div>
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, doloremque!</h1>
+    <script>
+      const btn=document.querySelector('button')
+      btn.addEventListener('click',()=>{
+        console.log(document.body.parentElement.getAttribute("theme"))
+      })
+      console.log(document.styleSheets)
+    </script>
+
+    <!-- <essai-essai id="root" name="doe gaut" data-essai="34" blue>
       <template>
         {"name":"gautyuil"}
       </template>

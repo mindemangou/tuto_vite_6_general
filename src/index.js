@@ -6,9 +6,9 @@ let startScrollPosition=window.scrollY
 
 const header=document.querySelector('header')
 
+
 const headerHeight=header.offsetHeight
     console.log( ((window.innerHeight+startScrollPosition)/document.body.offsetHeight ) * 100 )
-
 window.addEventListener('scroll',()=>{
     
     const newScrollPosition=window.scrollY
